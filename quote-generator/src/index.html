@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Générateur de Devis</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Générateur de Devis</h1>
+        <form id="quote-form">
+            <fieldset>
+                <legend>Informations du Vendeur</legend>
+                <input type="text" id="seller-name" placeholder="Nom de l'entreprise" required>
+                <input type="text" id="seller-address" placeholder="Adresse" required>
+                <input type="text" id="seller-phone" placeholder="Téléphone" required>
+                <input type="email" id="seller-email" placeholder="Email" required>
+                <input type="text" id="seller-siret" placeholder="SIRET ou immatriculation" required>
+                <input type="text" id="seller-vat" placeholder="Numéro de TVA intracommunautaire">
+            </fieldset>
+            
+            <fieldset>
+                <legend>Informations du Client</legend>
+                <input type="text" id="client-name" placeholder="Nom de l'entreprise ou du client" required>
+                <input type="text" id="client-address" placeholder="Adresse" required>
+                <input type="text" id="client-phone" placeholder="Téléphone" required>
+                <input type="email" id="client-email" placeholder="Email" required>
+                <input type="text" id="client-siret" placeholder="SIRET ou immatriculation">
+                <input type="text" id="client-vat" placeholder="Numéro de TVA intracommunautaire">
+            </fieldset>
+
+            <fieldset>
+                <legend>Produits ou Services</legend>
+                <div id="items">
+                    <div class="item">
+                        <input type="text" class="item-name" placeholder="Nom du produit/service" required>
+                        <input type="number" class="item-quantity" placeholder="Quantité" required>
+                        <input type="number" class="item-price" placeholder="Prix unitaire (€)" required>
+                    </div>
+                </div>
+                <button type="button" id="add-item">Ajouter un produit/service</button>
+            </fieldset>
+
+           
+            
+            <fieldset>
+                <legend>Options</legend>
+                <label>
+                    <input type="checkbox" id="include-vat"> Inclure la TVA (20%)
+                </label>
+                <input type="number" id="discount" placeholder="Réduction (%)">
+                <textarea id="terms" placeholder="Conditions Générales de Vente"></textarea>
+            </fieldset>
+
+            <button type="submit">Générer le Devis</button>
+        </form>
+
+        <div id="quote-output" class="quote-output"></div>
+    </div>
+    <script src="scripts/app.js"></script>
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    
+</body>
+</html>

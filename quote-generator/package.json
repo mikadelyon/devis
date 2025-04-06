@@ -1,0 +1,24 @@
+{
+  "name": "quote-generator",
+  "version": "1.0.0",
+  "description": "A simple quote generator that provides random quotes with an attractive design.",
+  "main": "src/scripts/app.js",
+  "scripts": {
+    "start": "live-server src",
+    "build": "echo 'Build step not defined yet.'"
+  },
+  "keywords": [
+    "quote",
+    "generator",
+    "random",
+    "quotes",
+    "javascript",
+    "css"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}
